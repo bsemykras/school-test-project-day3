@@ -4,16 +4,10 @@ var http = require("http"),
     url = require("url"),
     routes = require("./routes");
 
-
-
-
 function requestHandler(request, response){
-
+    response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
     var parsedUrl = url.parse(request.url, true),
         method = request.method.toLowerCase();
-
-
-
 
     if(routes[method][parsedUrl.pathname]){
         routes[method][parsedUrl.pathname](request, response, function(err){
@@ -33,7 +27,6 @@ function requestHandler(request, response){
         response.end("Not Found");
     }
 }
-
 
 var server  = http.createServer(requestHandler);
 

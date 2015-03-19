@@ -1,0 +1,36 @@
+<style>
+td,td,tbody,table,thead{
+border:solid 2px black;
+}
+table{
+width:800px;
+margin:auto;
+border-collapse:collapse;
+}
+td,td{
+text-align:center;
+
+}
+</style>
+
+<h2 style="text-align:center; color:blue; font-weight:900">Список усіх юзерів, які знаходяться в json моделі<h2/>
+<table>
+           <tr>
+            <td>NAME</td>
+            <td>E-MAIL</td>
+            <td>DESCRIPTION</td>
+            <td>AGE</td>
+            </tr>
+            <tbody>
+            <% for user in @allUsers : %>
+                <tr>
+                    <td> <%- user.name %> </td>
+                    <td> <%- user.email %> </td>
+                    <td> <%- user.description %> </td>
+                    <td> <%- user.age %> </td>
+                </tr>
+            <% end %>
+            </tbody>
+</table>
+
+
