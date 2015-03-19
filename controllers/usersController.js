@@ -29,7 +29,7 @@ module.exports = {
 
         request.on("end", function () {
 
-            var personinfo = JSON.parse("path");
+            var personinfo = JSON.parse(path);
             if (validator.isLength(personinfo["name"], 1, 255) && validator.isEmail(personinfo["e-mail"]) &&
                 validator.isNumeric(personinfo["age"]) && validator.isLength(personinfo["description"], 1, 255)) {
 
