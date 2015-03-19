@@ -41,10 +41,7 @@ module.exports = {
                     age: personinfo["age"]
                 });
                 response.write("Save new object");
-
                 next();
-
-
             } else{
                 response.statusCode=404;
                 response.write(response.statusCode+" Error in Url");
