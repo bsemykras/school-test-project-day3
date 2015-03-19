@@ -33,7 +33,6 @@ module.exports = {
 
             if (validator.isLength(personinfo["name"], 1, 255) && validator.isEmail(personinfo["e-mail"]) &&
                 validator.isNumeric(personinfo["age"]) && validator.isLength(personinfo["description"], 1, 255)) {
-
                 users.Users.push({
                     name: personinfo["name"],
                     email: personinfo["e-mail"],
