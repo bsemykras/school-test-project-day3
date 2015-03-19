@@ -13,7 +13,7 @@ module.exports = {
             try{
                 response.write(renderer.render('users.ect', {
                     allUsers: users.items
-                }));
+                })) ;
                 next();
             }catch(e){
                 next(e);
