@@ -47,7 +47,6 @@ module.exports = {
                 response.write(response.statusCode+" Error in Url");
                 next();
             }
-
         });
     }};
 
