@@ -39,6 +39,7 @@ module.exports = {
                     description: personinfo["description"],
                     age: personinfo["age"]
                 });
+
                 response.write("Save new object");
                 next();
             } else{
